@@ -1,0 +1,30 @@
+/*
+todolist style
+*/
+
+/*variables*/
+;root {
+    -- nunito-font:Nuunito'
+
+
+/* background-color:#5366691*/
+background-image: url(https://source.unsplash.co/random/);
+main-height:100vh;
+z-index: inherit -10;
+background-position:center;
+background-repeat: no-repeat;
+background-size:cover;color: white;
+font-size:1.3rem;
+
+}
+hero{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vh;
+    top:0;
+    bottom: 0
+    background-color: rgba(31,34,118,0.5);
+}
+
+hi {
+    margin-top:12
