@@ -1,12 +1,12 @@
 /* Todo List */
-window,onload = function () {
-    //vRIABLES
+window.onload = function () {
+    //variables
     let form = document.getElementById("form");
      let input = document.getElementById("input");
      let btn = document.getElementById("btn");
      let list = document.getElementById("list");
-     let btnclr = document.getElementById("btnclr");
-     letid = 1;
+     let btnClr = document.getElementById("btnClr");
+     let id = 1;
      //listItem = {item: "todo item",checked: false}
      let liItem = "";
      let todoList = [];
@@ -14,17 +14,17 @@ window,onload = function () {
     btn.addEventListener("click",addTodoItem);
     
     //list event listener
-    list.addEventListener("click",boxchecked);
+    list.addEventListener("click",boxChecked);
 
     //event listener for clear list
-    btnclr.addEventListener("click",clearList);
+    btnClr.addEventListener("click",clearList);
 
     //input.addEventListener("keydown", addTodoItem);
 
 
 
-    if (this.localStorage.length < 0) 
-    {btnclr.style.display = "none"; // hide clearbtn
+    if (localStorage.length < 0) {
+    btnClr.style.display = "none"; // hide clear btn
     this.console.log("button");
 }
 
@@ -40,13 +40,13 @@ if(input.value === "") {
 alert("You must enter some value!");
 }
 else {
-    if(list.style.borderTop=== ") {
+    if(list.style.borderTop=== "") {
         console.log("here!")
 list.style.borderTop = "2px solid white";
 btnclr.style.display ="inline";
     }
     let text = input.value;
-    let item ='<li id="box-${id}">${text}<input id="li-${id}"class="checkboxes"type="checkbox"></li>';
+    let item ='<li id="li-${id}">${text}<input id="box-${id}"class="checkboxes"type="checkbox"></li>';
      list.insertAdjacentHTML('beforeend', item);
      liItem = {item: text, checked:false};
      todoList.push(liItem);
@@ -61,7 +61,7 @@ function boxChecked(event) {
     if(element.type ==="checkbox") {
         element.parentNode.style.textDecoration = "line-through";
         todoList = JSON.parse(localStorage.getItem("todoList"));
-        todoList[element.id.split('-')[1] - 1].checked element.checked.tostring();
+        todoList[element.id.split('-')[1] - 1].checked = element.checked.tostring();
         localStorage.setItem("todoList", JSON.stringify(todoList));
     }
 }
@@ -78,7 +78,7 @@ function addToLocalstorage() {
 //display all todo List 
 function displayList() {
     list.style.borderTop = "2px solid white";
-    todoList = JSON.parse(localStorage.getItem(todoList"));
+    todoList = JSON.parse(localStorage.getItem("todoList"));
     todoList.forEach(function(element) {
     console.log(element.item)
     let text = element.item;
@@ -88,7 +88,7 @@ function displayList() {
     //if there is a checked box, then style
     if (element.checked) {
     let li = document.getElementById("li-" + id);
-    li.style.textDecoration = line-through";
+    li.style.textDecoration = "line-through";
     li.childNodes[1].checked = element.checked;
     }
     id++;
@@ -101,7 +101,7 @@ function clearList() {
     localStorage.clear();
     list.innerHTML = "";
     btnclr.style.display = "none";
-    list.style,borderTop="";
+    list.style.borderTop="";
 }
 }
 /#li-${id}

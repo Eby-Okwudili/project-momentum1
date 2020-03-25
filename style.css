@@ -8,7 +8,7 @@ variables*/
     -- nunito-font:'Nunito', cursive;
 }
 body{
-/* background-color:#5366691;*/
+/*background-color:#5366691;*/
 background-image: url("https://source.unsplash.com/random/");
 min-height: 100vh;
 z-index: -10;
