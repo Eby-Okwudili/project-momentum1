@@ -5,7 +5,7 @@ todolist style
 variables*/
 
 :root {
-    -- nunito-font:'Nunito', cursive;
+    --nunito-font:'Nunito', cursive;
 }
 body{
 /*background-color:#5366691;*/
@@ -24,7 +24,7 @@ font-size: 1.3rem;
     min-height: 100vh;
     min-width: 100vw;
     top: 0;
-    bottom: 0
+    bottom: 0;
     background-color: rgba(31, 34, 118, 0.5);
 }
 
@@ -55,7 +55,7 @@ ul{
     width: 17px;
     height: 17px;
     background-color: #29677876;
-    border: 1px solid   #29677876
+    border: 1px solid   #29677876;
     border-radius: 3px;
 }
 
